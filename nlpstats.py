@@ -34,7 +34,7 @@ nplen = np.frompyfunc(len, 1, 1)
 # 平均句长
 def avg_sent_len(text): 
     # 删除英文
-    text_ = re.sub('[a-zA-Z]', '', text_)
+    text_ = re.sub('[a-zA-Z]', '', text)
     # 分段
     paras = text_.split('\n')
     sents = []
@@ -54,7 +54,7 @@ def avg_sent_len(text):
 # 以下算法在已测试算法中效率最高
 def info_den(text):
     # 删除英文
-    text_ = re.sub('[a-zA-Z]', '', text_)
+    text_ = re.sub('[a-zA-Z]', '', text)
     # 分词
     words = jieba.lcut(text_)
     # 实词（非停用词）
